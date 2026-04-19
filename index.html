@@ -1,1 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dClutter — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #2DD4BF;
+      --teal-dim: #1a9e8f;
+      --blue: #0EA5E9;
+      --navy: #0B1929;
+      --navy-mid: #0D2137;
+      --navy-card: #112844;
+      --text: #e2f0f8;
+      --text-muted: #7a9bb5;
+      --border: rgba(45, 212, 191, 0.12);
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% 0%, rgba(45,212,191,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 100%, rgba(14,165,233,0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    header {
+      padding: 56px 0 48px;
+      text-align: center;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .logo-img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 16px;
+      filter: drop-shadow(0 0 18px rgba(45,212,191,0.35));
+    }
+
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .page-title {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'DM Mono', monospace;
+      background: rgba(45,212,191,0.06);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--teal) 40%, var(--blue) 60%, transparent);
+      opacity: 0.25;
+      margin: 0 0 48px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(45,212,191,0.08), rgba(14,165,233,0.05));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .highlight-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+
+    .highlight p { font-size: 1rem; color: var(--text); line-height: 1.6; }
+
+    .highlight strong { color: var(--teal); }
+
+    section {
+      margin-bottom: 36px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.10s; }
+    section:nth-child(3) { animation-delay: 0.15s; }
+    section:nth-child(4) { animation-delay: 0.20s; }
+    section:nth-child(5) { animation-delay: 0.25s; }
+    section:nth-child(6) { animation-delay: 0.30s; }
+    section:nth-child(7) { animation-delay: 0.35s; }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 18px;
+      background: linear-gradient(180deg, var(--teal), var(--blue));
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+    ul li {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 0.85rem;
+    }
+
+    .card {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.97rem;
+      transition: opacity 0.2s;
+    }
+
+    .contact-link:hover { opacity: 0.75; }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    footer p { font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; }
+
+    footer .teal { color: var(--teal); opacity: 1; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text { font-size: 1.5rem; }
+      .highlight { padding: 18px 20px; }
+      .card { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo-wrap">
+      <img
+        class="logo-img"
+        src="https://raw.githubusercontent.com/jeremyrodas/dclutter-privacy/main/logo.png"
+        alt="dClutter logo"
+      />
+      <span class="logo-text">dClutter</span>
+    </div>
+    <div class="page-title">Privacy Policy</div>
+    <div class="updated">Last updated: April 19, 2025</div>
+  </header>
+
+  <div class="divider"></div>
+
+  <div class="highlight">
+    <div class="highlight-icon">🔒</div>
+    <p>
+      <strong>Your photos never leave your device.</strong>
+      dClutter operates entirely on-device using Apple's PhotoKit framework.
+      We do not collect, upload, transmit, or store any of your photos, videos,
+      or personal data on any server — ever.
+    </p>
+  </div>
+
+  <section>
+    <h2>What dClutter Does</h2>
+    <p>
+      dClutter is a storage management app for iPhone. It helps you reclaim
+      storage space by identifying duplicate photos, large videos, screenshots,
+      and blurry images — all processed locally on your device.
+    </p>
+  </section>
+
+  <section>
+    <h2>Information We Do Not Collect</h2>
+    <div class="card">
+      <ul>
+        <li>We do not collect your photos, videos, or any media files</li>
+        <li>We do not collect your name, email address, or contact information</li>
+        <li>We do not collect your location data</li>
+        <li>We do not use analytics or tracking SDKs</li>
+        <li>We do not sell or share any data with third parties</li>
+        <li>We do not use advertising networks or ad identifiers</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Photo Library Access</h2>
+    <p>
+      dClutter requests access to your photo library solely to scan for
+      duplicates, large files, screenshots, and blurry images. All processing
+      happens entirely on your device using Apple's PhotoKit framework.
+    </p>
+    <p>
+      You can revoke photo library access at any time in
+      <strong style="color: var(--text);">Settings → dClutter → Photos</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Purchases &amp; Subscriptions</h2>
+    <p>
+      dClutter offers optional in-app purchases (monthly, annual, and lifetime
+      plans) processed entirely by Apple through the App Store. We never see or
+      handle your payment information. Apple's privacy policy governs all
+      payment data.
+    </p>
+    <p>
+      Purchase history is stored locally on your device via StoreKit and is
+      used only to determine your premium status within the app.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data Storage</h2>
+    <p>
+      dClutter stores only minimal preferences locally on your device such as
+      app settings. No data is stored on external servers. Uninstalling the app
+      removes all locally stored data.
+    </p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>
+      dClutter does not knowingly collect any information from children under
+      the age of 13. The app contains no social features, accounts, or
+      communication tools.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>
+      If we make changes to this privacy policy, we will update the date at
+      the top of this page. Continued use of dClutter after changes constitutes
+      acceptance of the updated policy.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Reach out anytime:</p>
+    <a class="contact-link" href="mailto:jeremyrodas@icloud.com">
+      ✉️ jeremyrodas@icloud.com
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 Jeremy Rodas · <span class="teal">dClutter</span></p>
+    <p style="margin-top:6px;">Give your iPhone room to breathe.</p>
+  </footer>
+
+</div>
+</body>
+</html>
