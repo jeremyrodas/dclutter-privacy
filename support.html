@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dClutter - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            background: linear-gradient(135deg, #2DD4BF 0%, #0EA5E9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #94a3b8;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2DD4BF;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(45, 212, 191, 0.2);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        .contact-info {
+            background: rgba(45, 212, 191, 0.1);
+            border-left: 4px solid #2DD4BF;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info strong {
+            color: #2DD4BF;
+        }
+
+        a {
+            color: #2DD4BF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0EA5E9;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .faq-item {
+            background: rgba(45, 212, 191, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: #2DD4BF;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(45, 212, 191, 0.2);
+            color: #64748b;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="header_new.png" alt="dClutter Logo" class="logo" onerror="this.style.display='none'">
+            <h1>dClutter Support</h1>
+            <p class="tagline">Give your iPhone room to breathe.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:jeremyrodas@me.com">jeremyrodas@me.com</a></p>
+                <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+            </div>
+            <p>For general inquiries, technical support, feature requests, or any questions about dClutter, please email us at the address above. We're here to help!</p>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How does dClutter work?</h3>
+                <p>dClutter scans your iPhone's photo library entirely on-device to find duplicate photos, large videos, screenshots, and blurry shots. Everything happens locally on your device - we never upload your photos to any server.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data safe?</h3>
+                <p>Absolutely. dClutter processes everything on your device. We don't collect, store, or transmit any of your photos or personal data. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why do I need to grant photo library access?</h3>
+                <p>dClutter needs read and write access to your photo library to scan for duplicates and delete photos you choose to remove. Without this permission, the app cannot function.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I recover deleted photos?</h3>
+                <p>Yes! When you delete photos through dClutter, they go to your iPhone's "Recently Deleted" album where they remain for 30 days. You can recover them from there at any time.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How accurate is duplicate detection?</h3>
+                <p>dClutter uses perceptual hashing (dHash) to detect visually similar images, even if they've been slightly edited or resized. The algorithm groups photos with high similarity so you can review and decide which to keep.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does dClutter work offline?</h3>
+                <p>Yes! Since all processing happens on your device, dClutter works completely offline. No internet connection is required.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <p>You can cancel your subscription at any time through your iPhone's Settings:</p>
+                <ul>
+                    <li>Open Settings app</li>
+                    <li>Tap your name at the top</li>
+                    <li>Tap "Subscriptions"</li>
+                    <li>Select dClutter</li>
+                    <li>Tap "Cancel Subscription"</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens if I cancel my subscription?</h3>
+                <p>If you cancel, you'll retain access to premium features until the end of your current billing period. After that, the app will revert to free tier limitations.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Report a Bug</h2>
+            <p>Found a bug? We appreciate your help in making dClutter better. Please email us at <a href="mailto:jeremyrodas@me.com">jeremyrodas@me.com</a> with:</p>
+            <ul>
+                <li>A description of the issue</li>
+                <li>Steps to reproduce the problem</li>
+                <li>Your iPhone model and iOS version</li>
+                <li>Screenshots (if applicable)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Feature Requests</h2>
+            <p>Have an idea for a new feature? We'd love to hear it! Send your suggestions to <a href="mailto:jeremyrodas@me.com">jeremyrodas@me.com</a>.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Jeremy Rodas. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
